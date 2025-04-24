@@ -37,6 +37,10 @@ repositories {
         name = 'BlameJared Maven (CrT / Bookshelf)'
         url = 'https://maven.blamejared.com'
     }
+    maven {
+        name = "Modrinth Maven"
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 dependencies {
@@ -51,18 +55,25 @@ dependencies {
         exclude group: "maven.modrinth"
         exclude group: "me.fallenbreath"
     }
+
+    modImplementation "maven.modrinth:sodium:mc${project.minecraft_version}-${project.sodium_version}-fabric"
+    modImplementation "maven.modrinth:iris:${project.iris_version}+${project.minecraft_version}-fabric"
 }
 
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
+    inputs.property "sodium_version", project.sodium_version
+    inputs.property "iris_version", project.iris_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+                "loader_version": project.loader_version,
+                "sodium_version": project.sodium_version,
+                "iris_version": project.iris_version
     }
 }
 
