@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "inthedark",
+  "version": "${version}",
+  "name": "In The Dark",
+  "description": "A horror minecraft mod.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/inthedark/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.mlxoa.inthedark.client.MainDataGenerator"
+    ],
+    "client": [
+      "com.mlxoa.inthedark.client.MainClient"
+    ],
+    "main": [
+      "com.mlxoa.inthedark.Main"
+    ]
+  },
+  "mixins": [
+    "inthedark.mixins.json",
+    {
+      "config": "inthedark.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "breaks": {
+    "sodium": "*"
+  }
+}

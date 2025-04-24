@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.mlxoa.inthedark.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinWorld"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

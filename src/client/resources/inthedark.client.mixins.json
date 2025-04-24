@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.mlxoa.inthedark.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinBackgroundRenderer",
+    "MixinClientWorld",
+    "MixinMusicTracker",
+    "MixinWorldRenderer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

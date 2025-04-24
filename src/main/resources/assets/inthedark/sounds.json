@@ -1,0 +1,32 @@
+{
+  "rain0": {
+    "sounds": [
+      "inthedark:rain0"
+    ]
+  },
+  "generic0": {
+    "sounds": [
+      "inthedark:generic0"
+    ]
+  },
+  "forest0": {
+    "sounds": [
+      "inthedark:forest0"
+    ]
+  },
+  "forest1": {
+    "sounds": [
+      "inthedark:forest1"
+    ]
+  },
+  "ambience0": {
+    "sounds": [
+      "inthedark:ambience0"
+    ]
+  },
+  "ambience1": {
+    "sounds": [
+      "inthedark:ambience1"
+    ]
+  }
+}
